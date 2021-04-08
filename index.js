@@ -1,3 +1,10 @@
 document.querySelector("#speech").addEventListener("click", function(e){
-  alert("SPEECH");
+  speech.start();
+  alert("RECORDING");
+  speech.stop();
+  console.log(e)
 });
+
+
+var speech = new SpeechRecognition();
+speech.lang = "jp";
